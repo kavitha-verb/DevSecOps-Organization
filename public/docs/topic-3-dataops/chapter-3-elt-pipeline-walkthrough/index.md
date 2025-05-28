@@ -13,7 +13,7 @@
 
 ## Prerequisites
 
-You need to have an Azure account. You can sign up using the [[Azure Free Tier]](https://azure.microsoft.com/en-us/free/), for which you will receive $200 credits for 30 days. Then upgrade to Pay-As-You-Go(PAYG) mode. The PAYG is required for this lab to work. 
+You need to have an Azure account. You can sign up using the [[Azure Free Tier]](https://azure.microsoft.com/en-us/free/), for which you will receive $200 credits for 30 days. Then upgrade to Pay-As-You-Go(PAYG) mode. The PAYG is required for this lab to work.
 
 Log in to the [[Azure Portal]{.underline}](https://portal.azure.com)
 
@@ -37,27 +37,27 @@ Create an Azure Storage Account in your preferred region and set up a Blob Conta
 2. Click the "Create" button at the top.
 
 3. Fill out the form as follows:
-   
+
    - **Subscription:** Select your subscription (default is fine)
-   
+
    - **Resource Group:** You can create a new one, e.g., rg-nyc-taxi
-   
+
    - **Storage Account Name:** Must be a globally unique lowercase string, e.g., nyctaxistorage2025
-   
+
    - **Region:** Choose a region close to you, e.g., West US or East US
-   
+
    - **Performance:** Standard
-   
+
    - **Redundancy:** Locally-redundant storage (LRS)
-   
+
    - **Account kind: StorageV2 (general-purpose v2)**
 
 ![](./assets/media/image1.png)
 
 4. Important: Enable Hierarchical Namespace (for Azure Data Lake Storage Gen2)
-   
+
    - Go to the "Advanced" tab
-   
+
    - Locate the **Hierarchical Namespace** section, set **Enable Hierarchical Namespace**
 
 ![](./assets/media/image2.png)
@@ -73,9 +73,9 @@ Create an Azure Storage Account in your preferred region and set up a Blob Conta
 2. In the left navigation pane, select **Containers**, then click the top "+ Container" button
 
 3. Configure as follows:
-   
+
    - **Name**: Enter a name such as nyc-taxi-raw
-   
+
    - **Public access level**: Select **Private (no anonymous access)**
 
 4. Click **Create**
@@ -89,20 +89,20 @@ Create an Azure Storage Account in your preferred region and set up a Blob Conta
 2. In the left menu, click "Access keys"
 
 3. Copy the following two values (you will use them in ADF and Databricks configurations):
-   
+
    - **Storage account name** (e.g., nyctaxistorage2025)
-   
+
    - **Key1** (a Base64-encoded key)
 
 ![](./assets/media/image5.png)
 
 **You've now completed:**
 
-  - A Storage Account that supports ADLS (StorageV2 + Hierarchical Namespace enabled)
+- A Storage Account that supports ADLS (StorageV2 + Hierarchical Namespace enabled)
 
-  - A private blob container named nyc-taxi-raw
+- A private blob container named nyc-taxi-raw
 
-  - Collected the account name and key for programmatic access
+- Collected the account name and key for programmatic access
 
 ### 2. Create a Blob Container
 
@@ -113,15 +113,15 @@ Create an Azure Storage Account in your preferred region and set up a Blob Conta
 2. Search for "Data Factories" and click Create
 
 3. Fill in the form as follows：
-   
+
    - **Resource group:** rg-nyc-taxi
-   
+
    - **Name**: adf-nyc-taxi-xinya（for example）
-   
+
    - **Region**: same as Storage Account (West US for example)
-   
+
    - **Version**: V2（by default）
-   
+
    - **Git Configuration**: optionally choose "Configure Git later"
 
 ![](./assets/media/image6.png)
@@ -151,11 +151,11 @@ Create an Azure Storage Account in your preferred region and set up a Blob Conta
 ![](./assets/media/image9.png)
 
 3. Configuration information is as below：
-   
+
    - **Name**: HttpNycTaxi
-   
+
    - **Base URL**: https://d37ci6vzurychx.cloudfront.net/trip-data/
-   
+
    - Authentication type: **Anonymous**
 
 4. Click "Create"
@@ -167,9 +167,9 @@ Create an Azure Storage Account in your preferred region and set up a Blob Conta
 1. Similarly, click "+ New" → **Azure Blob Storage**
 
 2. Configuration information is as below：
-   
+
    - **Name**: BlobNycTaxi
-   
+
    - Authentication method: **Account key**
 
 3. Click "Create"
@@ -189,9 +189,9 @@ Create an Azure Storage Account in your preferred region and set up a Blob Conta
 ![](./assets/media/image14.png)
 
     > Relative URL: yellow_tripdata_2025-01.parquet
-    > 
+    >
     > Compression type: None
-    > 
+    >
     > Important: **Binary Copy** need to select
 
 ![](./assets/media/image15.png)
@@ -232,9 +232,9 @@ In the Azure Portal, open your Storage Account：
 
 1. Left menu → Access keys\
    Copy：
-   
+
    - **Storage account name**（eg：nyctaxistorage2025）
-   
+
    - **key1**
 
 2. Configure Spark access like this (you'll use this later in your notebook):
@@ -265,22 +265,22 @@ You'll use this configuration to read from blob file paths, for example:
 > ![](./assets/media/image23.png)
 
 4. Click run, you will find that up to now, you still do not have a
-    cluster to compute. Go to 'Compute' - 'Pools' to create a new instance pool. 
-   
+   cluster to compute. Go to 'Compute' - 'Pools' to create a new instance pool.
+
    ![](./assets/media/image43.jpg)
 
-    Configure it as below:
-      
+   Configure it as below:
+
    a. Name: high-availability-pool
-      
+
    b. Min Idle: 2
-      
+
    c. Terminate instances above minimum after "60" minutes of idle time
-      
+
    d. Instance Type: Standard_D4ds_v5
-      
+
    e. Preloaded Databricks Runtime Version: 15.4 LTS
-      
+
    f. On-demand/Spot: All On-demand
 
    ![](./assets/media/image44.jpg)
@@ -289,12 +289,12 @@ You'll use this configuration to read from blob file paths, for example:
    ![](./assets/media/image45.jpg)
 
    And configure the cluster based on the screenshot below:
-   
+
    ![](./assets/media/image24.jpg)
 
-   a.  Click "Create Cluster" to create it. 
-   
-   b.  After around 10 to 15 minutes, the cluster status should be **Running**.
+   a. Click "Create Cluster" to create it.
+
+   b. After around 10 to 15 minutes, the cluster status should be **Running**.
 
 6. Attach the notebook to this cluster. You can now run your code --- try a simple "hello world" to test.
 
@@ -314,20 +314,20 @@ Copy and paste the example code into your Notebook：
     parquet_path = "green/2025/01/green_tripdata_2025-01.parquet"
     #yellow taxi data similar, just change the name and rerun it:
     #parquet_path = "yellow/2025/01/yellow_tripdata_2025-01.parquet"
-    
-    
+
+
     # configure Spark to visit Azure Blob
     spark.conf.set(
      f"fs.azure.account.key.{storage_account_name}.blob.core.windows.net",
      storage_account_key
     )
-    
+
     # get the complete file path
     file_path = f"wasbs://{container_name}@{storage_account_name}.blob.core.windows.net/{parquet_path}"
-    
+
     # read parquet file
     df = spark.read.parquet(file_path)
-    
+
     # show df data and schema
     df.show(5)
     df.printSchema()
@@ -353,7 +353,7 @@ Example code for Green taxi data cleaning
 
 ```python
     # clean the Green taxi dataframe
-    
+
     # modify the column names mapping
     rename_map = {
        "VendorID": "vendor_id",
@@ -377,15 +377,15 @@ Example code for Green taxi data cleaning
        "trip_type": "trip_type",
        "congestion_surcharge": "congestion_surcharge"
     }
-    
-    
+
+
     from pyspark.sql.functions import col
     from pyspark.sql.types import IntegerType
-    
+
     # rename the columns
     for old_col, new_col in rename_map.items():
        df = df.withColumnRenamed(old_col, new_col)
-    
+
     # data type standardization（eg：convert passenger_count and vendor_id to Integer）
     df = df.withColumn("vendor_id", col("vendor_id").cast(IntegerType()))
     df = df.withColumn("passenger_count", col("passenger_count").cast(IntegerType()))
@@ -394,13 +394,13 @@ Example code for Green taxi data cleaning
     df = df.withColumn("do_location_id", col("do_location_id").cast(IntegerType()))
     df = df.withColumn("payment_type", col("payment_type").cast(IntegerType()))
     df = df.withColumn("trip_type", col("trip_type").cast(IntegerType()))
-    
+
     # Null value handling
     df = df.na.fill({
        "passenger_count": 0,
        "trip_type": 1
     })
-    
+
     # check schema again
     df.printSchema()
     df.show(5)
@@ -432,14 +432,14 @@ Example code for Yellow taxi data cleaning
        "congestion_surcharge": "congestion_surcharge",
        "Airport_fee": "airport_fee"
     }
-    
+
     from pyspark.sql.functions import col
     from pyspark.sql.types import IntegerType
-    
+
     # rename the columns
     for old_col, new_col in rename_map.items():
        df = df.withColumnRenamed(old_col, new_col)
-    
+
     # data type standardization（eg：convert passenger_count and vendor_id to Integer）
     df = df.withColumn("vendor_id", col("vendor_id").cast(IntegerType()))
     df = df.withColumn("passenger_count", col("passenger_count").cast(IntegerType()))
@@ -447,10 +447,10 @@ Example code for Yellow taxi data cleaning
     df = df.withColumn("pu_location_id", col("pu_location_id").cast(IntegerType()))
     df = df.withColumn("do_location_id", col("do_location_id").cast(IntegerType()))
     df = df.withColumn("payment_type", col("payment_type").cast(IntegerType()))
-    
+
     # Null value handling
     df = df.na.fill({"passenger_count": 0})
-    
+
     # check schema again
     df.printSchema()
     df.show(5)
@@ -458,11 +458,11 @@ Example code for Yellow taxi data cleaning
 
 If this step runs smoothly, you've now completed:
 
-  - Reading the Parquet file
+- Reading the Parquet file
 
-  - Cleaning and unifying schema with PySpark
+- Cleaning and unifying schema with PySpark
 
-  - Data type normalization and null value handling
+- Data type normalization and null value handling
 
 We're now ready to write the cleaned DataFrame into Azure SQL or Synapse Analytics.
 
@@ -472,11 +472,11 @@ The next step is to create either an Azure SQL Server or Synapse Analytics insta
 
 This table will later be used for:
 
-  - data modeling in Synapse
+- data modeling in Synapse
 
-  - Aggregations (e.g., revenue by zone and month)
+- Aggregations (e.g., revenue by zone and month)
 
-  - Final visualizations in Power BI or other BI tools.
+- Final visualizations in Power BI or other BI tools.
 
 #### Step 1: Create a Synapse WorkSpace + Dedicated SQL Pool:
 
@@ -520,15 +520,15 @@ Run the code below in the Databricks Notebook:
        "hostNameInCertificate=*.sql.azuresynapse.net;"
        "loginTimeout=30;"
     )
-    
+
     jdbc_username = "sqladminuser" #change to your username
     jdbc_password = "YourPassword" #change to your password
     #table_name = "green_tripdata_2025_01"
     table_name = "yellow_tripdata_2025_01"
-    
+
     # Here, the tempDir is the staging container of Synapse
     temp_dir = "wasbs://synapse-temp@nyctaxistorage2025.blob.core.windows.net/tempdir"
-    
+
     # write to Synapse（overwrite mode）
     df.write \
      .format("com.databricks.spark.sqldw") \
@@ -555,6 +555,8 @@ After the notebook successfully run, go to Synapse studio - Data - Workspace tab
 
 - Join trip tables with zone lookup to create fact_trip, and aggregate
   revenue by month and zone
+
+![](./assets/media/image46.png)
 
 ### 1. Create zone lookup dim table
 
@@ -616,9 +618,9 @@ Before we dive into the SQL codes, let's figure out how and why we design them:
   The green taxi and yellow taxi tables have slightly different columns.  
   We need to make sure they have the same set of columns so they can later be UNIONed together in the unified `fact_trip` table.  
   Example:
-  
+
   - `trip_type` and `ehail_fee` exist only in green taxi data → set as NULL in yellow taxi staging
-  
+
   - `airport_fee` exists only in yellow taxi data → set as NULL in green taxi staging
 
 - **Add taxi type flag**  
@@ -732,11 +734,11 @@ Before we dive into the SQL codes, let's figure out how and why we design them:
     CREATE VIEW dbo.vw_monthly_zone_revenue AS
     SELECT
      FORMAT(pickup_datetime, 'yyyy-MM') AS trip_month,   -- eg. 2025-01
-     pickup_zone,                                        
+     pickup_zone,
      taxi_type,                                          -- yellow / green
-     COUNT(*) AS trip_count,                             
-     SUM(total_amount) AS total_revenue                  
-    FROM dbo.fact_trip                                    
+     COUNT(*) AS trip_count,
+     SUM(total_amount) AS total_revenue
+    FROM dbo.fact_trip
     WHERE pickup_datetime IS NOT NULL
     GROUP BY
      FORMAT(pickup_datetime, 'yyyy-MM'),
