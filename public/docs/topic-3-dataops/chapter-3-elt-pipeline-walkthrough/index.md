@@ -265,23 +265,38 @@ You'll use this configuration to read from blob file paths, for example:
 > ![](./assets/media/image23.png)
 
 4. Click run, you will find that up to now, you still do not have a
-    cluster to compute. Go to the Cluster creation page and configure：
+    cluster to compute. Go to 'Compute' - 'Pools' to create a new instance pool. 
    
-   a.  Name: nyc-taxi-cluster（for example）
-   
-   b.  Cluster Mode: Single Node
-   
-   c.  Worker type: Recommended Standard_DS3_v2 or Standard_D4as_v4
-   
-   d.  Databricks Runtime: Use the default
-   
-   e.  Click "Create Cluster" to start it
-   
-   f.  After a few minutes, the cluster status should be **Running**.
+   ![](./assets/media/image43.jpg)
 
-![](./assets/media/image24.png)
+    Configure it as below:
+      
+   a. Name: high-availability-pool
+      
+   b. Min Idle: 2
+      
+   c. Terminate instances above minimum after "60" minutes of idle time
+      
+   d. Instance Type: Standard_D4ds_v5
+      
+   e. Preloaded Databricks Runtime Version: 15.4 LTS
+      
+   f. On-demand/Spot: All On-demand
 
-5. Attach the notebook to this cluster. You can now run your code --- try a simple "hello world" to test.
+   ![](./assets/media/image44.jpg)
+
+5. Then go to the Cluster creation page
+   ![](./assets/media/image45.jpg)
+
+   And configure the cluster based on the screenshot below:
+   
+   ![](./assets/media/image24.jpg)
+
+   a.  Click "Create Cluster" to create it. 
+   
+   b.  After around 10 to 15 minutes, the cluster status should be **Running**.
+
+6. Attach the notebook to this cluster. You can now run your code --- try a simple "hello world" to test.
 
 ![](./assets/media/image25.png)
 
