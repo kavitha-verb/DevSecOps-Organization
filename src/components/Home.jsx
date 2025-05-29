@@ -217,13 +217,19 @@ const Home = ({onNavigateToOverview}) => {
                         </div>
                         <ul style={{paddingLeft: '1.2rem', color: '#333', fontSize: '1rem', lineHeight: '1.6'}}>
                             <li>
-                                <div>Watch How-It-Works Videos On</div>
-                                <a href="https://www.youtube.com/@opendevsecops" target="_blank"
+                                <div>Watch How-To Tutorials On</div>
+                                <a href="https://www.youtube.com/playlist?list=PLHSn7VF_gBbpii_WBgIjAJubd33hnY0mz" target="_blank"
                                    rel="noopener noreferrer" style={{color: '#4B2E83', textDecoration: 'underline'}}>
                                     Opendevsecops YouTube Channel
                                 </a>
                             </li>
-                            <li>LinkedIn Article: DevSecOps: The $23 Billion Opportunity You Can’t Afford to Miss</li>
+                            <li>
+                                <div>LinkedIn Article: </div>
+                                <a href = "https://www.linkedin.com/pulse/devsecops-23-billion-opportunity-you-cant-afford-miss-rtcfc" target="_blank"
+                                   rel="noopener noreferrer" style={{color: '#4B2E83', textDecoration: 'underline'}}>
+                                    DevSecOps: The $23 Billion Opportunity You Can’t Afford to Miss
+                                </a>
+                            </li>
                             <li>
                                 <a href="https://women-incloud-network.mn.co/spaces/14493304/chat" target="_blank"
                                    rel="noopener noreferrer" style={{color: '#4B2E83', textDecoration: 'underline'}}>
@@ -252,9 +258,42 @@ const Home = ({onNavigateToOverview}) => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer"
+                                <a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer"
+                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
+                                    Azure & Azure Managed Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://owasp.org/www-project-top-ten/" target="_blank"
+                                   rel="noopener noreferrer"
                                    style={{color: '#4B2E83', textDecoration: 'underline'}}>
                                     OWASP Top 10 Web App Security Risks
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.jenkins.io/" target="_blank" rel="noopener noreferrer"
+                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
+                                    Jenkins
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer"
+                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
+                                    Docker
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.sonarsource.com/products/sonarqube/" target="_blank"
+                                   rel="noopener noreferrer"
+                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
+                                    SonarQube
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://developer.hashicorp.com/terraform" target="_blank"
+                                   rel="noopener noreferrer"
+                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
+                                    Terraform
                                 </a>
                             </li>
                             <li>

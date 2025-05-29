@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kiki3177.github.io/devops_dataops_board_game_tutorial",
+  "homepage": "https://open-devsecops.github.io/open-devsecops-lab-in-the-box-boardgame",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

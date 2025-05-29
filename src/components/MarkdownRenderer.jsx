@@ -63,6 +63,7 @@ const MarkdownRenderer = ({markdownUrl}) => {
                             style={{
                                 marginTop: '3rem',
                                 marginRight: '2rem',
+                                paddingBottom: '20rem',
                             }}
                         >
                             <div className="markdown-body">

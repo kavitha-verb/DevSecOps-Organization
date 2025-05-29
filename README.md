@@ -1,1 +1,1 @@
-# devsecops_frontend
+# DevSecOps Lab In the Box Board Game Website
