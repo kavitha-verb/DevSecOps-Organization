@@ -24,6 +24,7 @@ Traditional data workflows often suffer from bottlenecks, manual processes, and 
 DataOps solves this by creating a culture of continuous integration, testing, monitoring, and deployment of data pipelines--bringing speed, collaboration, and governance to the entire Data Lifecycle.
 
 <hr>
+
 ## 3. Tools and Technologie
 
 ### Orchestration & Automation
@@ -42,6 +43,7 @@ Infrastructure as Code enables teams to manage and provision infrastructure thro
 - Pulumi: A modern IaC framework that allows infrastructure to be defined using general-purpose programming languages such as Python, TypeScript, or Go. Ideal for developer-centric teams seeking flexible, code-driven infrastructure management.
 
 <hr>
+
 ## 4. Our DataOps Lab
 
 To help students gain hands-on experience in building a DataOps pipeline that moves data from external systems to the cloud, we designed this practical DataOps lab.
@@ -58,6 +60,7 @@ This dataops pipeline will have four stages:
 So let's get started! 
 
 <hr>
+
 ## 5. Other Resources
 
 1. What is Dataops | IBM
