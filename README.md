@@ -1,6 +1,6 @@
 # DevSecOps Lab In the Box Board Game Website Maintenance Guide - Internal Use
 
-📦 Project Structure Overview
+## 📦 Project Structure Overview
 
 ```hcl
     .
@@ -18,7 +18,7 @@
     
 ```
 
-📄 Maintenance Guide
+## 📄 Maintenance Guide
 
 If you need to update the content of the tutorials:
 
@@ -43,7 +43,7 @@ If you need to update the content of the tutorials:
 7. Commit and push the changes to the main branch, GitHub Pages will automatically serve the updated site from the docs/ directory.
 
 
-🌐 Deployment Notes
+## 🌐 Deployment Notes
 
 GitHub Pages is already configured to serve content from the `docs/` folder in the root of this repository. Always make sure the latest build artifacts are inside `docs/` after renaming from `dist/`.
 
