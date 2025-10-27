@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DevSecOps Lab In the Box Board Game Website Maintenance Guide - Internal Use
 
 ## 📦 Project Structure Overview
@@ -53,3 +54,7 @@ Go to `Settings > Pages > Source` and make sure it is set to:
 Branch: main
 Folder: /docs
 ```
+=======
+# DevSecOps-Organization
+DevSecOps-Organization
+>>>>>>> 0801097a85b0f98047dbfc3262c55e1d912fca52
