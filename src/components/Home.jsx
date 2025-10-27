@@ -85,18 +85,8 @@ const Home = ({onNavigateToOverview}) => {
                         textAlign: 'left',
                         color: '#333',
                     }}>
-                        Welcome to <strong>DevSecOps Lab In A Box</strong>—a hands-on training program co-created by
-                        the University of Washington, Boeing SME & Volunteers, and Women in Cloud to help you build
-                        secure,
-                        AI-powered, cloud-native applications. With the DevSecOps market expected to surpass $23B by
-                        2030, this program fills critical talent gaps where 40% of students lack real-world experience
-                        and 1 in
-                        3 have never heard of DevSecOps. You'll gain access to real labs, subsidized access to Microsoft
-                        certifications, and project-based learning to master Zero Trust, AI safety, and DataOps.
-                        Over 4 months, you'll build in-demand skills and confidence to thrive in the modern tech
-                        economy.<br/><br/>
-                        <strong>Start now — unlock your roadmap, join the lab, and launch your future in secure
-                            innovation.</strong>
+                        Welcome to DevSecOps Lab In A Box, a hands-on training program designed by Women in Cloud in collaboration with University of Washington and Boeing to help faculty and student build secure, AI-powered, cloud-native applications. With the DevSecOps market expected to surpass $23B by 2030, this program fills critical talent gaps where 40% of students lack real-world experience and 1 in 3 have never heard of DevSecOps.  You'll gain access to real labs, subsidized access to Microsoft certifications, and project-based learning to master Zero Trust, AI safety, and DataOps.  Through this lab, students will develop in-demand skills and confidence to thrive in the modern tech economy.<br/><br/>
+                        <strong>Start now—unlock your roadmap, join the lab, and launch your future in secure innovation.</strong>
                     </p>
                 </div>
             </div>
@@ -184,61 +174,32 @@ const Home = ({onNavigateToOverview}) => {
                     marginTop: '2rem',
                     marginBottom: '2rem'
                 }}>
-                    {/* Column 1 - Certification */}
-                    <div style={{flex: 1, minWidth: '250px'}}>
+                    {/* Column 3 - Technical Resources */}
+                    <div style={{flex: 1, minWidth: '150px'}}>
                         <div style={{
                             fontFamily: "'Questrial', sans-serif",
                             fontWeight: 'bold',
                             marginBottom: '0.5rem',
+                            marginLeft: '1rem',
                             fontSize: '1.125rem',
                             textShadow: '0.4px 0.4px 0 #333',
-                        }}>WICxDevSecOps Certifications
-                        </div>
-                        <div style={{display: 'flex', alignItems: 'flex-start', gap: '1rem'}}>
-                            <img src={wicLogo2} alt="WIC Logo 2" style={{width: '80px'}}/>
-                            <p style={{fontSize: '1rem', lineHeight: '1.6', color: '#333'}}>
-                                Become DevSecOps Professional: Trained, Employed, and Paying It Forward—Literally.
-                                <a href="https://womenincloud.com/devsecops/" target="_blank" rel="noopener noreferrer"
-                                   style={{color: '#4B2E83', textDecoration: 'underline'}}> Apply Today!</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Column 2 - Help Resources */}
-                    <div style={{flex: 1, minWidth: '270px'}}>
-                        <div style={{
-                            fontFamily: "'Questrial', sans-serif",
-                            fontWeight: 'bold',
-                            marginBottom: '0.5rem',
-                            marginLeft: '1.1rem',
-                            fontSize: '1.125rem',
-                            textShadow: '0.4px 0.4px 0 #333',
-                        }}>Help Resources
+                        }}>Getting Started
                         </div>
                         <ul style={{paddingLeft: '1.2rem', color: '#333', fontSize: '1rem', lineHeight: '1.6'}}>
                             <li>
-                                <div>Watch How-To Tutorials On</div>
-                                <a href="https://www.youtube.com/playlist?list=PLHSn7VF_gBbpii_WBgIjAJubd33hnY0mz" target="_blank"
-                                   rel="noopener noreferrer" style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    Opendevsecops YouTube Channel
-                                </a>
+                            <p style={{fontSize: '1rem', lineHeight: '1.6', color: '#333'}}>
+                               Understand DevSecOps Lab In A Box</p>
                             </li>
                             <li>
-                                <div>LinkedIn Article: </div>
-                                <a href = "https://www.linkedin.com/pulse/devsecops-23-billion-opportunity-you-cant-afford-miss-rtcfc" target="_blank"
-                                   rel="noopener noreferrer" style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    DevSecOps: The $23 Billion Opportunity You Can’t Afford to Miss
-                                </a>
+                            <p style={{fontSize: '1rem', lineHeight: '1.6', color: '#333'}}>
+                            Access the DevSecOps Gameboard</p>
                             </li>
                             <li>
-                                <a href="https://women-incloud-network.mn.co/spaces/14493304/chat" target="_blank"
-                                   rel="noopener noreferrer" style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    Digital Network – Get Connected
-                                </a>
+                            <p style={{fontSize: '1rem', lineHeight: '1.6', color: '#333'}}>
+                            Watch the Lab Videos</p>
                             </li>
                         </ul>
                     </div>
-
                     {/* Column 3 - Technical Resources */}
                     <div style={{flex: 1, minWidth: '150px'}}>
                         <div style={{
@@ -252,58 +213,56 @@ const Home = ({onNavigateToOverview}) => {
                         </div>
                         <ul style={{paddingLeft: '1.2rem', color: '#333', fontSize: '1rem', lineHeight: '1.6'}}>
                             <li>
-                                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
-                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    GitHub
-                                </a>
+                            <p style={{fontSize: '1rem', lineHeight: '1.6', color: '#333'}}>
+                            Cloud Provider : Azure & Azure Managed Services</p>
                             </li>
                             <li>
-                                <a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer"
-                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    Azure & Azure Managed Services
-                                </a>
+                            <p style={{fontSize: '1rem', lineHeight: '1.6', color: '#333'}}>
+                            Github / Github Pages</p>
                             </li>
                             <li>
-                                <a href="https://owasp.org/www-project-top-ten/" target="_blank"
-                                   rel="noopener noreferrer"
-                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    OWASP Top 10 Web App Security Risks
-                                </a>
-                            </li>
+                            <p style={{fontSize: '1rem', lineHeight: '1.6', color: '#333'}}>
+                            Jenkins/ Docker/ Sonar Qube</p> </li>
                             <li>
-                                <a href="https://www.jenkins.io/" target="_blank" rel="noopener noreferrer"
-                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    Jenkins
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer"
-                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    Docker
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.sonarsource.com/products/sonarqube/" target="_blank"
-                                   rel="noopener noreferrer"
-                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    SonarQube
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://developer.hashicorp.com/terraform" target="_blank"
-                                   rel="noopener noreferrer"
-                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    Terraform
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://react.dev/" target="_blank" rel="noopener noreferrer"
-                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>
-                                    React
-                                </a>
+                            <p style={{fontSize: '1rem', lineHeight: '1.6', color: '#333'}}>
+                            Terraform</p>
                             </li>
                         </ul>
                     </div>
+                    {/* Column 1 - Certification */}
+                    <div style={{flex: 1, minWidth: '250px'}}>
+                        <div style={{
+                            fontFamily: "'Questrial', sans-serif",
+                            fontWeight: 'bold',
+                            marginBottom: '0.5rem',
+                            fontSize: '1.125rem',
+                            textShadow: '0.4px 0.4px 0 #333',
+                        }}>WICxDevSecOps Certifications
+                        </div>
+                        <div style={{display: 'flex', alignItems: 'flex-start', gap: '1rem'}}>
+                            <img src={wicLogo2} alt="WIC Logo 2" style={{width: '80px'}}/>
+                            <ul style={{paddingLeft: '1.2rem', color: '#333', fontSize: '1rem', lineHeight: '1.6'}}>
+                            <li>
+                            <a href="https://womenincloud.com/workforce/" target="_blank" rel="noopener noreferrer"
+                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>Learn about Women In Cloud Opportunities
+                                   </a>
+                            </li>
+                            <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer"
+                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>Job Readiness Curriculum
+                                   </a>
+                            </li>
+                            <li>
+                            <a href="https://womenincloud.com/devsecops/" target="_blank" rel="noopener noreferrer"
+                                   style={{color: '#4B2E83', textDecoration: 'underline'}}>Join the Global Network
+                                   </a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    
                 </div>
             </div>
 
@@ -316,6 +275,7 @@ const Home = ({onNavigateToOverview}) => {
                 fontSize: '1.125rem',
                 color: '#333',
                 fontFamily: "'Questrial', sans-serif",
+                display:"none"
             }}>
                 📄 We include our{' '}
                 <a
@@ -335,7 +295,7 @@ const Home = ({onNavigateToOverview}) => {
 
 
             {/* Credits Section */}
-            <div style={{marginTop: '1.5rem', width: '85%', textAlign: 'center' }}>
+            <div style={{marginTop: '1.5rem', width: '85%', textAlign: 'center',display:"none" }}>
                 <div style={{ fontWeight: '600', fontSize: '1.25rem', marginBottom: '0.3rem' }}>
                     🎖️ Core Credits
                 </div>
@@ -390,7 +350,7 @@ const Home = ({onNavigateToOverview}) => {
             </div>
 
             {/* Acknowledgments Section */}
-            <div style={{ marginTop: '1.5rem', width: '85%', textAlign: 'center' }}>
+            <div style={{ marginTop: '1.5rem', width: '85%', textAlign: 'center' , display:"none"}}>
                 <div style={{ fontWeight: '600', fontSize: '1.25rem', marginBottom: '0.3rem' }}>
                     ❤ Special Thanks
                 </div>
@@ -465,6 +425,7 @@ const Home = ({onNavigateToOverview}) => {
                 color: '#4B2E83',
                 fontFamily: "'Questrial', sans-serif",
                 textShadow: '0.5px 0.5px 0',
+                display:"none"
             }}>
                 DESIGNED BY TEAM XYKK
             </div>
@@ -478,6 +439,7 @@ const Home = ({onNavigateToOverview}) => {
                     right: '2rem',
                     width: '200px',
                     height: 'auto',
+                    display:"none"
                 }}
             />
         </div>
