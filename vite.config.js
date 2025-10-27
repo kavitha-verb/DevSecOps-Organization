@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/open-devsecops-lab-in-the-box-boardgame/',
+  base: '/DevSecOps-Organization/',
 })
